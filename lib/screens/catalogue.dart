@@ -15,7 +15,7 @@ class Catalogue extends StatefulWidget {
 }
 
 class _CatalogueState extends State<Catalogue> {
-  Widget produitStockContainer() {
+  Widget produitCatalogueContainer() {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5), color: Colors.white),
@@ -303,11 +303,11 @@ class _CatalogueState extends State<Catalogue> {
                               margin: EdgeInsets.only(bottom: 10),
                               child: Row(
                                 children: [
-                                  Expanded(child: produitStockContainer()),
+                                  Expanded(child: produitCatalogueContainer()),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Expanded(child: produitStockContainer())
+                                  Expanded(child: produitCatalogueContainer())
                                 ],
                               ),
                             ),
@@ -315,22 +315,22 @@ class _CatalogueState extends State<Catalogue> {
                               margin: EdgeInsets.only(bottom: 10),
                               child: Row(
                                 children: [
-                                  Expanded(child: produitStockContainer()),
+                                  Expanded(child: produitCatalogueContainer()),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Expanded(child: produitStockContainer())
+                                  Expanded(child: produitCatalogueContainer())
                                 ],
                               ),
                             ),
                             Container(
                               child: Row(
                                 children: [
-                                  Expanded(child: produitStockContainer()),
+                                  Expanded(child: produitCatalogueContainer()),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Expanded(child: produitStockContainer())
+                                  Expanded(child: produitCatalogueContainer())
                                 ],
                               ),
                             )
@@ -344,7 +344,7 @@ class _CatalogueState extends State<Catalogue> {
                                   mainAxisSpacing: 15),
                           itemCount: 4,
                           itemBuilder: (BuildContext ctx, index) {
-                            return produitStockContainer();
+                            return produitCatalogueContainer();
                           }),*/
                         ),
                     SizedBox(

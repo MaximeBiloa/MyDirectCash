@@ -18,119 +18,100 @@ class FournisseurPage extends StatefulWidget {
 
 class _FournisseurPageState extends State<FournisseurPage> {
   Widget produitStockContainer() {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context,
-            PageTransition(
-                type: PageTransitionType.rightToLeft,
-                child: PayementFactureValidate(
-                  factureInfos: {
-                    'title': 'Bouquet ACCESS',
-                  },
-                )));
-      },
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5), color: Colors.white),
-        padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-        child: Stack(
-          children: [
-            Positioned(
-                child: Container(
-              width: 80,
-              height: 40,
-              color: marronColor,
-              child: Column(
-                children: [
-                  Text(
-                    'En stock',
-                    style: TextStyle(
-                        color: greenColor,
-                        fontSize: 12,
-                        fontFamily: title_font),
-                  ),
-                  Text(
-                    'kg 100',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontFamily: title_font),
-                  ),
-                ],
-              ),
-            )),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 5),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
-                    decoration:
-                        BoxDecoration(border: Border.all(color: marronColor)),
-                    child: Image.asset(
-                      'assets/images/logo-guichet-producteur.png',
-                      fit: BoxFit.cover,
-                      width: 70,
-                    ),
-                  ),
-                  Text(
-                    'Semence de Cacao',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: marronColor,
-                        fontSize: 15,
-                        fontFamily: title_font),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Prix/kg 20 000 XAF',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: marronColor,
-                        fontSize: 14,
-                        fontFamily: title_font),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '+ Ajouter',
-                          style: TextStyle(
-                              color: greenColor,
-                              fontSize: 15,
-                              fontFamily: title_font),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: greenColor)),
-                          child: Text(
-                            '    001',
-                            style:
-                                TextStyle(fontSize: 15, fontFamily: title_font),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
-              ),
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5), color: Colors.white),
+      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+      child: Stack(
+        children: [
+          Positioned(
+              child: Container(
+            width: 80,
+            height: 40,
+            color: marronColor,
+            child: Column(
+              children: [
+                Text(
+                  'En stock',
+                  style: TextStyle(
+                      color: greenColor, fontSize: 12, fontFamily: title_font),
+                ),
+                Text(
+                  'kg 100',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: title_font),
+                ),
+              ],
             ),
-          ],
-        ),
+          )),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: marronColor)),
+                  child: Image.asset(
+                    'assets/images/logo-guichet-producteur.png',
+                    fit: BoxFit.cover,
+                    width: 70,
+                  ),
+                ),
+                Text(
+                  'Semence de Cacao',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: marronColor, fontSize: 15, fontFamily: title_font),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Prix/kg 20 000 XAF',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: marronColor, fontSize: 14, fontFamily: title_font),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '+ Ajouter',
+                        style: TextStyle(
+                            color: greenColor,
+                            fontSize: 15,
+                            fontFamily: title_font),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: greenColor)),
+                        child: Text(
+                          '    001',
+                          style:
+                              TextStyle(fontSize: 15, fontFamily: title_font),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
