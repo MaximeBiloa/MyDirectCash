@@ -29,7 +29,7 @@ class _CodeCheckSimState extends State<CodeCheckSim> {
                 image: AssetImage('assets/images/background.png'),
                 fit: BoxFit.cover)),
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 20),
+          padding: EdgeInsets.symmetric(vertical: 00),
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.4,
