@@ -2,21 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:mydirectcash/screens/achats.dart';
 import 'package:mydirectcash/screens/ajout_produit_catalogue.dart';
 import 'package:mydirectcash/screens/carousel_page.dart';
+import 'package:mydirectcash/screens/catalogue.dart';
 import 'package:mydirectcash/screens/components/bottom_navigation.dart';
 import 'package:mydirectcash/screens/components/last_transactions.dart';
 import 'package:mydirectcash/screens/guichet_achat_produit.dart';
+import 'package:mydirectcash/screens/home_guichet.dart';
 import 'package:mydirectcash/screens/settings.dart';
 import 'package:mydirectcash/screens/transactions.dart';
 import 'package:mydirectcash/utils/colors.dart';
 import 'package:mydirectcash/utils/fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
-class HomeGuichet extends StatefulWidget {
+class ModuleVente extends StatefulWidget {
   @override
-  _HomeGuichetState createState() => _HomeGuichetState();
+  _ModuleVenteState createState() => _ModuleVenteState();
 }
 
-class _HomeGuichetState extends State<HomeGuichet> {
+class _ModuleVenteState extends State<ModuleVente> {
   bool showDollar = true;
   @override
   Widget build(BuildContext context) {
@@ -167,12 +169,6 @@ class _HomeGuichetState extends State<HomeGuichet> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        child: Icon(Icons.qr_code, size: 90),
-                      )
                     ],
                   ),
                 ),
@@ -308,10 +304,10 @@ class _HomeGuichetState extends State<HomeGuichet> {
                                   context,
                                   PageTransition(
                                       type: PageTransitionType.rightToLeft,
-                                      child: GuichetAchatProduit()));
+                                      child: AjoutProduitCatalogue()));
                             },
                             child: Text(
-                              'Achetez un produit',
+                              'Vendre un produit',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
@@ -322,6 +318,26 @@ class _HomeGuichetState extends State<HomeGuichet> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.rightToLeft,
+                                child: Catalogue()));
+                      },
+                      child: Text("Consultez votre Catalogue",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: content_font,
+                              //fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: marronColor))),
                 ),
                 SizedBox(
                   height: 40,
@@ -337,7 +353,7 @@ class _HomeGuichetState extends State<HomeGuichet> {
                       Row(children: [
                         Icon(Icons.chevron_right, size: 18, color: marronColor),
                         Text(
-                          'Listes des achats effectués',
+                          'Listes des ventes effectués',
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               //fontSize: 14,

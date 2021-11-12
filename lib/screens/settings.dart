@@ -9,7 +9,10 @@ import 'package:mydirectcash/screens/components/bottom_navigation.dart';
 import 'package:mydirectcash/screens/components/settingstab_option.dart';
 import 'package:mydirectcash/screens/guichet_remplir_info.dart';
 import 'package:mydirectcash/screens/home.dart';
+import 'package:mydirectcash/screens/liste_fournisseurs.dart';
 import 'package:mydirectcash/screens/login.dart';
+import 'package:mydirectcash/screens/module_vente.dart';
+import 'package:mydirectcash/screens/simulateur_facture.dart';
 import 'package:mydirectcash/screens/transactions.dart';
 import 'package:mydirectcash/utils/colors.dart';
 import 'package:mydirectcash/utils/fonts.dart';
@@ -263,12 +266,53 @@ class _SettingsState extends State<Settings> {
                     title: 'Recharger mon compte',
                   ),
                 ),
-                SettingsTabOption(
-                    icon: Icon(
-                      Icons.chevron_right,
-                      size: 18,
-                    ),
-                    title: 'Simulateur de facture'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: SimulateurFacture()));
+                  },
+                  child: SettingsTabOption(
+                      icon: Icon(
+                        Icons.chevron_right,
+                        size: 18,
+                      ),
+                      title: 'Simulateur de facture'),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: ListeFournisseurs(
+                              fournisseurs: {},
+                            )));
+                  },
+                  child: SettingsTabOption(
+                      icon: Icon(
+                        Icons.chevron_right,
+                        size: 18,
+                      ),
+                      title: 'Liste de fournisseurs'),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: ModuleVente()));
+                  },
+                  child: SettingsTabOption(
+                      icon: Icon(
+                        Icons.chevron_right,
+                        size: 18,
+                      ),
+                      title: 'Liste de ventes effectuées'),
+                ),
                 SettingsTabOption(
                     icon: Icon(
                       Icons.chevron_right,

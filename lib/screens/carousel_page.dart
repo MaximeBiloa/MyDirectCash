@@ -19,39 +19,45 @@ class _CarouselPageState extends State<CarouselPage> {
   static const List<Map> slides = [
     {
       'image': 'assets/images/pexels-anna-nekrashevich-6802046.jpg',
-      'title': 'Tansfert d\'argent',
+      'title': 'TRANSFERT D’ARGENT',
       'content':
-          "Transférez de l'argent dans un compte qui soit ou non DirectCash et le destinatare disposera de son argent comme bon lui semble."
+          "Pour tous opérateurs mobiles, Transférez de l’argent par DirectCash  et le destinataire disposera de son argent comme bon lui semble dans son compte Directcash ou non."
     },
     {
       'image': 'assets/images/pexels-anna-nekrashevich-6801872.jpg',
-      'title': "Transactions OM/MoMo",
+      'title': "TRANSACTION OM/MOMO",
       'content':
-          "Effectuez vos transactions Orange money et Mobile money en toute sécurité et en un click."
+          "Effectuez vos transactions  Orange money (OM) et Mobile money (MoMo) en toute sécurité et en un click."
     },
     {
       'image': 'assets/images/nubelson-fernandes-laLxjCYtkFY-unsplash.jpg',
-      'title': 'Paiement marchand',
+      'title': 'PAIEMENT MARCHAND',
       'content':
-          "Vous faites vos courses à MAHIMA, DOVE, Santa Lucia ou autre supermarché, réglez vos factures comme des pros."
+          "Zéros problèmes de monnaies. Faites vos courses chez tous Marchands, réglez vos factures comme des pros par QR Code…"
     },
     {
       'image': 'assets/images/businessman-800x400.jpg',
-      'title': 'Payer une facture',
+      'title': 'PAYER UNE FACTURE',
       'content':
-          "Payez et régler vos factures ENEO, CAMWATER ainsi que vos réabonnements CANAL+ où que vous soyez à partir de votre téléphone."
+          "Réglez vos factures  ENEO, CAMWATER ainsi que vos réabonnements  CANAL+ ou que vous soyez à partir de votre téléphone mobile."
     },
     {
       'image': 'assets/images/téléchargement.jpg',
-      'title': 'Achat de crédit de communication',
+      'title': 'ACHAT DE CREDIT DE COMMUNICATION',
       'content':
-          "Dites désormais stop au manque de crédit et rechargez vos SIM via notre plateforme"
+          "Pour tous opérateurs mobiles, dites désormais stop au manque de crédit  de communication et rechargez vos SIM via notre plateforme Directcash."
     },
     {
       'image': 'assets/images/pexels-og-mpango-4090605.jpg',
-      'title': 'Guichet producteur',
+      'title': 'GUICHET PRODUCTEURS',
       'content':
-          "Vous êtes producteurs de Cacao/Café, vous êtes fournisseurs d'intrants agricoles, alors ceci est fait sur mesure pour faciliter la gestion de vos achats ainsi que votre subvention"
+          "Vous êtes producteurs de Cacao/Café, vous êtes fournisseurs d’intrants agricoles, alors ceci est fait sur mesure pour faciliter la gestion de vos achats ainsi que  la gestion de votre subvention."
+    },
+    {
+      'image': 'assets/images/bank.jpg',
+      'title': 'SERVICES BANCAIRES',
+      'content':
+          "Vous voulez consulter votre compte bancaire, vous voulez créer un compte dans une banque ou microfinance partenaire, vous voulez faire un Dépôt/Retrait dans votre compte dans une banque ou microfinance partenaire."
     }
   ];
   GlobalKey<dynamic> _sliderKey = GlobalKey();
